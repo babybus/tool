@@ -1,0 +1,79 @@
+
+
+	Node: 结点
+	{
+		name, 			-- 名称
+		path, 			-- 路径
+		children = { 	-- 子结点集合
+
+		},
+		others = {
+
+		}
+	}
+
+	ClassNode: 类结点
+	{
+		brief, 			-- 简短描述
+		intro, 			-- 详细描述
+		link, 			-- 链接
+		aliases = { 	-- 别名集合
+			AliaseNode
+		},
+		fields = { 		-- 字段集合
+			FieldNode
+		},
+		methods = { 	-- 方法集合
+			MethodNode
+		},
+	}
+
+	FieldNode: 字段结点
+	{
+		type, 			-- 类型
+		intro, 			-- 介绍
+	}
+
+
+	MethodNode: 方法结点
+	{
+		brief, 			-- 简短描述
+		intro, 			-- 详细描述
+		usage, 			-- 使用方法
+		notice, 		-- 注意点
+		state, 			-- 状态(默认值为STATE_INUSE, 取值: STATE_INUSE, STATE_DEPRECATED)
+		link, 			-- 链接
+		aliases = { 	-- 别名集合
+			AliaseNode
+		},
+		examples = {	-- 示例集合
+			ExampleNode
+		}, 	
+		params = { 		-- 参数集合
+			ParamNode
+		},
+		returns = { 	-- 返回值集合
+			FieldNode
+		},
+	}
+
+	ExampleNode: 示例结点
+	{
+		intro, 			-- 示例介绍
+	}
+
+	ParamNode: 	参数结点
+	{
+		type, 			-- 类型
+		intro, 			-- 参数描述信息
+	}
+
+	AliaseNode: 别名结点
+	{
+
+	}
+
+	OtherNode: 其他信息结点
+	{
+		intro, 			-- 介绍
+	}

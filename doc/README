@@ -1,0 +1,1 @@
+dataStruct中做了数据格式说明，将生成好的数据串保存到data.ini中，运行main.lua则会在目录下生成index.html和相应的工程目录
